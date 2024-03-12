@@ -10,13 +10,8 @@ def get_s3_client():
 
 def get_random_image():
     s3 = get_s3_client()
-    BUCKET_NAME = current_app.config['BUCKET_NAME']
+    BUCKET_NAME = "checoperezimages"
     IMAGE_PREFIX = current_app.config['IMAGE_PREFIX']
-
-    # Verifica si BUCKET_NAME es una cadena
-    if not isinstance(BUCKET_NAME, str):
-        # Si no es una cadena, intenta convertirla a una cadena
-        BUCKET_NAME = str(BUCKET_NAME)
 
     if not isinstance(IMAGE_PREFIX, str):
         # Si no es una cadena, intenta convertirla a una cadena
