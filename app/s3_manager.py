@@ -17,5 +17,4 @@ def get_random_image():
     image_keys = [obj['Key'] for obj in objects.get('Contents', [])]
     random_image_key = random.choice(image_keys)
     image_url = f"https://{BUCKET_NAME}.s3.us-east-2.amazonaws.com/{random_image_key}"
-    # return jsonify({'image_url': image_url})
     return redirect(image_url)
