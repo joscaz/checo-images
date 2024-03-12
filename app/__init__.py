@@ -5,9 +5,7 @@ import logging
 flask_app = Flask(__name__)
 CORS(flask_app)
 
-
 flask_app.config.from_object('config')
-
 
 logging.getLogger().setLevel(logging.INFO)
 flask_app.logger.setLevel(logging.INFO)
