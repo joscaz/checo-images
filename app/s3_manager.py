@@ -18,6 +18,10 @@ def get_random_image():
         # Si no es una cadena, intenta convertirla a una cadena
         BUCKET_NAME = str(BUCKET_NAME)
 
+    if not isinstance(IMAGE_PREFIX, str):
+        # Si no es una cadena, intenta convertirla a una cadena
+        IMAGE_PREFIX = str(IMAGE_PREFIX)
+
     objects = s3.list_objects_v2(Bucket=BUCKET_NAME, Prefix=IMAGE_PREFIX)
     image_keys = [obj['Key'] for obj in objects.get('Contents', [])]
     random_image_key = random.choice(image_keys)
