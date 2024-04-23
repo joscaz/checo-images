@@ -6,4 +6,4 @@ def get_random_checo_image():
     return get_random_image()
 
 if __name__ == '__main__':
-    flask_app.run(debug=True)
+    flask_app.run(debug=False)
