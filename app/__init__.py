@@ -16,6 +16,6 @@ flask_app.logger.addHandler(handler)
 
 @flask_app.route("/")
 def hello_world():
-    return "<p>Helo, world!</p>"
+    return "<p>Hola mi nina te amo!</p>"
 
 import app.routes
